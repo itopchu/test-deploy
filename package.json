@@ -9,13 +9,14 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-cloud": "4.16.2",
     "@strapi/plugin-i18n": "4.16.2",
     "@strapi/plugin-users-permissions": "4.16.2",
+    "@strapi/provider-upload-cloudinary": "^4.16.2",
     "@strapi/strapi": "4.16.2",
     "better-sqlite3": "8.6.0",
+    "cloudinary": "^1.41.1",
     "pg": "^8.11.3",
     "pg-connection-string": "^2.6.2",
     "react": "^18.0.0",
