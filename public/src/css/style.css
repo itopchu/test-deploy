@@ -1,0 +1,134 @@
+nav {
+  background-color: #a98467;
+  overflow: hidden;
+  position: relative;
+}
+
+#navLinks {
+  display: none;
+}
+
+nav a {
+  color: #f0ead2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1rem;
+  display: block;
+}
+
+.icon {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 2.5rem;
+}
+
+.logo {
+  max-width: 25%;
+}
+
+nav a:hover {
+  background-color: #cca98e;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.welcome {
+  max-width: 85%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.bi-map-fill {
+  color: rgb(95, 150, 95);
+}
+
+.fa-hippo {
+  color: rgb(95, 150, 95);
+  font-size: 1.3rem;
+}
+
+.bi-clipboard2-fill {
+  color: rgb(95, 150, 95);
+  font-size: 1.3rem;
+}
+
+footer {
+  background-color: #cca98e;
+  color: #f0ead2;
+}
+
+#footer-2,
+#footer-3 {
+  border-bottom: 2px solid #f0ead2;
+}
+
+.copyright {
+  font-size: 0.7rem;
+}
+
+footer a {
+  display: block;
+  margin: 0.5rem 0;
+  text-decoration: none !important;
+  color: #f0ead2;
+}
+
+.animals-hero {
+  width: 85%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.animals-header {
+  background: -webkit-linear-gradient(#3bd354, #0a5c0a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.animal-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+
+.animal-page {
+  width: 80%;
+  height: auto;
+  border-radius: 5%;
+}
+
+.caracal-facts li::marker {
+  content: "🐱";
+}
+
+.fox-facts li::marker {
+  content: "🦊 ";
+}
+
+.python-facts li::marker {
+  content: "🐍";
+}
+
+.meerkat-facts li::marker {
+  content: "🦦";
+}
+
+.map-img {
+  width: 100%;
+  height: auto;
+}

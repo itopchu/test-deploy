@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Polonezköy Zoo Park'a hoş geldiniz! Ziyaretinizden memnun ayrılmanız için lütfen uygulamamıza bir göz gezdirin.">
+    <title>Zoo</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="CC Zoo">
+  <link rel="apple-touch-icon" href="/src/img/icons/apple-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="/src/img/icons/apple-icon-152x152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="/src/img/icons/apple-icon-167x167.png" sizes="167x167">
+  <link rel="apple-touch-icon" href="/src/img/icons/apple-icon-180x180.png" sizes="180x180">
+  <meta name="msapplication-TileImage" content="/src/img/icons/app-icon-192x192.png">
+  <meta name="msapplication-TileColor" content="#fff">
+  <meta name="theme-color" content="#a98467">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="active"><img src="src/img/Logo_Country Club_PNG_Beyaz.webp" class="logo" alt="logo"></a>
+        <div id="navLinks">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="harita/harita.html">Harita</a>
+            <a href="hayvanlar/animals.html">Hayvanlarımız</a>
+            <a href="#">Kurallar</a>
+            <a href="#">Hakkımızda</a>
+            <a href="#">İletişim</a>
+        </div>
+
+        <a href="#" class="icon"><i class="bi bi-list"></i></a>
+    </nav>
+    <div class="img-wrapper">
+        <img src="src/img/welcome.PNG" class="welcome">
+    </div>
+    <div class="container welcome-message mt-3">
+        <h1 class="text-center">Hoş geldiniz!</h1>
+        <p class="text-center">Polonezköy Zoo Park'a hoş geldiniz. Sevdiklerinizle ve bünyemizde barındırdığımız değerli
+            dostlarımızla harika bir zaman
+            geçireceğinizden eminiz. Ziyaretinizden en yüksek verimi alabilmeniz adına sizler için bu uygulamayı
+            hazırladık.
+        </p>
+    </div>
+    <div class="container features-section">
+        <h2 class="text-center mt-4">Uygulamamızda neler mi var?</h2>
+    </div>
+    <div class="container features d-flex justify-content-center align-items-center flex-column">
+        <i class="bi bi-map-fill"></i>
+        <h3>Harita</h3>
+        <p class="text-center">Gezinizin her anında nerede olduğunuza ulaşabilir, ziyaretiniz için bir rota
+            belirleyebilirsiniz.</p>
+        <i class="fa-solid fa-hippo"></i>
+        <h3>Hayvanlarımız</h3>
+        <p class="text-center">Bünyemizde barınan değerli dostlarımızla ilgili bilgilere ulaşabilirsiniz. Geziniz
+            esnasında öğrenmek için etrafta gördüğünüz QR kodlarını taratın.</p>
+        <i class="bi bi-clipboard2-fill"></i>
+        <h3>Kurallar</h3>
+        <p class="text-center">Hem sizler hem de hayvan dostlarımız için hepimizin uyması gereken bazı kurallar var.
+            Lütfen ziyaretinize
+            başlamadan önce bir göz atın!</p>
+    </div>
+    <div class="text-center mt-3">
+        <button type="button" id="backToTopButton" class="btn btn-faq btn-light p-3">En üste dön <i
+                class="bi bi-chevron-up"></i>
+        </button>
+    </div>
+    <footer>
+        <div class="container-fluid container-footer mt-5 text-center">
+            <div class="row">
+                <div class="col-xxl-2 pt-3 pt-xxl-0 img-center-wrapper" id="footer-1">
+                    <a> <img src="src/img/Logo_Country Club_PNG_Beyaz.webp" class="img-fluid"></a>
+                </div>
+                <div class="col-xxl-2 mt-2 pb-2" id="footer-2">
+                    <a href="harita/harita.html" id="footer-link">Harita</a>
+                    <a href="hayvanlar/animals.html" class="my-3" id="footer-link">Hayvanlarımız</a>
+                    <a id="footer-link">Kurallar</a>
+                </div>
+                <div class="col-xxl-2 mt-2 pb-2" id="footer-3">
+                    <a id="footer-link" class="my-3">Hakkımızda</a>
+                    <a id="footer-link">İletişim</a>
+                </div>
+            </div>
+            <p class="text-center pt-3 copyright">Copyright 2023 Polonezköy Country Club</p>
+            <p class="text-center pb-3 copyright mb-0">Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="src/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script src="src/js/button.js"></script>
+</body>
+
+</html>
