@@ -362,24 +362,41 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiTestTest extends Schema.CollectionType {
-  collectionName: 'tests';
+export interface ApiHayvanHayvan extends Schema.CollectionType {
+  collectionName: 'hayvans';
   info: {
-    singularName: 'test';
-    pluralName: 'tests';
-    displayName: 'Test';
+    singularName: 'hayvan';
+    pluralName: 'hayvans';
+    displayName: 'hayvan';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    sss: Attribute.String;
+    aile: Attribute.String & Attribute.Required;
+    sinif: Attribute.String & Attribute.Required;
+    durum: Attribute.String & Attribute.Required;
+    resim: Attribute.Media & Attribute.Required;
+    minikResim: Attribute.Media & Attribute.Required;
+    aciklama: Attribute.RichText;
+    ozellikler: Attribute.RichText;
+    haritaKodu: Attribute.Integer & Attribute.Required & Attribute.Unique;
+    isim: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<
+      'api::hayvan.hayvan',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::test.test', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<
+      'api::hayvan.hayvan',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -800,7 +817,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::test.test': ApiTestTest;
+      'api::hayvan.hayvan': ApiHayvanHayvan;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
