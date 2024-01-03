@@ -377,8 +377,8 @@ export interface ApiHayvanHayvan extends Schema.CollectionType {
     aile: Attribute.String & Attribute.Required;
     sinif: Attribute.String & Attribute.Required;
     durum: Attribute.String & Attribute.Required;
-    resim: Attribute.Media & Attribute.Required;
-    minikResim: Attribute.Media & Attribute.Required;
+    resim: Attribute.Media;
+    minikResim: Attribute.Media;
     aciklama: Attribute.RichText;
     ozellikler: Attribute.RichText;
     haritaKodu: Attribute.Integer & Attribute.Required & Attribute.Unique;
