@@ -1,34 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Socket.IO Client</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.socket.io 'unsafe-inline';">
-    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <title>Webhook Client</title>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const socket = io('https://webhook-pwa.onrender.com/'); // Use your server URL
-            let hayvanData = null;
-
-            socket.on('postCreated', function (data) {
-                console.log('New Hayvan data received:', data);
-                hayvanData = data;
-                updateDOM();
-            });
-
-            function updateDOM() {
-                if (hayvanData) {
-                    document.getElementById('aile').textContent = hayvanData.aile;
-                    document.getElementById('sinif').textContent = hayvanData.sinif;
-                    document.getElementById('durum').textContent = hayvanData.durum;
-                    document.getElementById('resim').src = hayvanData.resim;
-                    document.getElementById('minikResim').src = hayvanData.minikResim;
-                    document.getElementById('aciklama').innerHTML = hayvanData.aciklama; // Rich text as HTML
-                    document.getElementById('ozellikler').innerHTML = hayvanData.ozellikler; // Rich text as HTML
-                    document.getElementById('haritaKodu').textContent = hayvanData.haritaKodu;
-                    document.getElementById('isim').textContent = hayvanData.isim;
-                }
+            function fetchData() {
+                fetch('https://webhook-pwa.onrender.com/poll') // Polling endpoint
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data) {
+                            updateDOM(data);
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
             }
+
+            function updateDOM(data) {
+                document.getElementById('aile').textContent = data.aile;
+                document.getElementById('sinif').textContent = data.sinif;
+                document.getElementById('durum').textContent = data.durum;
+                document.getElementById('resim').src = data.resim;
+                document.getElementById('minikResim').src = data.minikResim;
+                document.getElementById('aciklama').innerHTML = data.aciklama;
+                document.getElementById('ozellikler').innerHTML = data.ozellikler;
+                document.getElementById('haritaKodu').textContent = data.haritaKodu;
+                document.getElementById('isim').textContent = data.isim;
+            }
+
+            // Poll every 5 seconds
+            setInterval(fetchData, 5000);
         });
     </script>
 </head>
@@ -36,7 +38,7 @@
     <div id="hayvanContainer">
         <h1 id="isim"></h1>
         <p>Aile: <span id="aile"></span></p>
-        <p>Sınıf: <span id="sinif"></span></p>
+        <p>Sinif: <span id="sinif"></span></p>
         <p>Durum: <span id="durum"></span></p>
         <img id="resim" alt="Resim" />
         <img id="minikResim" alt="Minik Resim" />
