@@ -1,5 +1,5 @@
 nav {
-  background-color: #a98467;
+  background-color: #008945;
   overflow: hidden;
   position: relative;
 }
@@ -9,7 +9,7 @@ nav {
 }
 
 nav a {
-  color: #f0ead2;
+  color: white;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1rem;
@@ -28,7 +28,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #cca98e;
+  background-color: #37a76f;
 }
 
 .img-wrapper {
@@ -59,8 +59,8 @@ nav a:hover {
 }
 
 footer {
-  background-color: #cca98e;
-  color: #f0ead2;
+  background-color: #008945;
+  color: white;
 }
 
 #footer-2,
@@ -76,7 +76,7 @@ footer a {
   display: block;
   margin: 0.5rem 0;
   text-decoration: none !important;
-  color: #f0ead2;
+  color: white;
 }
 
 .animals-hero {
@@ -130,5 +130,10 @@ footer a {
 
 .map-img {
   width: 100%;
+  height: auto;
+}
+
+.qrImage {
+  width: 25%;
   height: auto;
 }
