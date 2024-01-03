@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hayvans",
+  "info": {
+    "singularName": "hayvan",
+    "pluralName": "hayvans",
+    "displayName": "hayvan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "aile": {
+      "type": "string",
+      "required": true
+    },
+    "sinif": {
+      "type": "string",
+      "required": true
+    },
+    "durum": {
+      "type": "string",
+      "required": true
+    },
+    "resim": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "minikResim": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "aciklama": {
+      "type": "richtext"
+    },
+    "ozellikler": {
+      "type": "richtext"
+    },
+    "haritaKodu": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "isim": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
